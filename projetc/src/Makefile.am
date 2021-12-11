@@ -12,7 +12,8 @@ projetc_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	foyer.c foyer.h
+	foyer.c foyer.h \
+	nutritionniste.c nutritionniste.h
 
 projetc_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 

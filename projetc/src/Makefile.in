@@ -100,7 +100,8 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_projetc_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) \
-	interface.$(OBJEXT) callbacks.$(OBJEXT) foyer.$(OBJEXT)
+	interface.$(OBJEXT) callbacks.$(OBJEXT) foyer.$(OBJEXT) \
+	nutritionniste.$(OBJEXT)
 projetc_OBJECTS = $(am_projetc_OBJECTS)
 am__DEPENDENCIES_1 =
 projetc_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -282,7 +283,8 @@ projetc_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	foyer.c foyer.h
+	foyer.c foyer.h \
+	nutritionniste.c nutritionniste.h
 
 projetc_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 all: all-am
@@ -375,6 +377,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/foyer.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/interface.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nutritionniste.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/support.Po@am__quote@
 
 .c.o:

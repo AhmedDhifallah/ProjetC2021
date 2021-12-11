@@ -15,7 +15,7 @@
 int
 main (int argc, char *argv[])
 {
-  GtkWidget *Foyer_ESPRIT;
+  GtkWidget *Foyer_ESPRIT, *gestiondesmenusdelasemaine;
 
 #ifdef ENABLE_NLS
   bindtextdomain (GETTEXT_PACKAGE, PACKAGE_LOCALE_DIR);
@@ -35,6 +35,8 @@ main (int argc, char *argv[])
    */
   Foyer_ESPRIT = create_Foyer_ESPRIT ();
   gtk_widget_show (Foyer_ESPRIT);
+  gestiondesmenusdelasemaine = create_gestiondesmenusdelasemaine ();
+  gtk_widget_show (gestiondesmenusdelasemaine);
 
   gtk_main ();
   return 0;
