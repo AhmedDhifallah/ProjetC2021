@@ -2159,6 +2159,11 @@ create_verifierlamodification (void)
   GtkWidget *hbox35;
   GtkWidget *image35;
   GtkWidget *label74;
+  GtkWidget *buttonretour_cm;
+  GtkWidget *alignment37;
+  GtkWidget *hbox37;
+  GtkWidget *image37;
+  GtkWidget *label77;
 
   verifierlamodification = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (verifierlamodification), _("Choisir l'identifiant du menu \303\240 modifier"));
@@ -2180,7 +2185,7 @@ create_verifierlamodification (void)
 
   buttonmodifierverif_cm = gtk_button_new ();
   gtk_widget_show (buttonmodifierverif_cm);
-  gtk_fixed_put (GTK_FIXED (fixed15), buttonmodifierverif_cm, 288, 152);
+  gtk_fixed_put (GTK_FIXED (fixed15), buttonmodifierverif_cm, 160, 152);
   gtk_widget_set_size_request (buttonmodifierverif_cm, 152, 56);
 
   alignment35 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -2199,8 +2204,32 @@ create_verifierlamodification (void)
   gtk_widget_show (label74);
   gtk_box_pack_start (GTK_BOX (hbox35), label74, FALSE, FALSE, 0);
 
+  buttonretour_cm = gtk_button_new ();
+  gtk_widget_show (buttonretour_cm);
+  gtk_fixed_put (GTK_FIXED (fixed15), buttonretour_cm, 328, 152);
+  gtk_widget_set_size_request (buttonretour_cm, 152, 56);
+
+  alignment37 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment37);
+  gtk_container_add (GTK_CONTAINER (buttonretour_cm), alignment37);
+
+  hbox37 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox37);
+  gtk_container_add (GTK_CONTAINER (alignment37), hbox37);
+
+  image37 = gtk_image_new_from_stock ("gtk-undo", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image37);
+  gtk_box_pack_start (GTK_BOX (hbox37), image37, FALSE, FALSE, 0);
+
+  label77 = gtk_label_new_with_mnemonic (_("Retour"));
+  gtk_widget_show (label77);
+  gtk_box_pack_start (GTK_BOX (hbox37), label77, FALSE, FALSE, 0);
+
   g_signal_connect ((gpointer) buttonmodifierverif_cm, "clicked",
                     G_CALLBACK (on_buttonmodifierverif_cm_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) buttonretour_cm, "clicked",
+                    G_CALLBACK (on_buttonretour_cm_clicked),
                     NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
@@ -2213,6 +2242,11 @@ create_verifierlamodification (void)
   GLADE_HOOKUP_OBJECT (verifierlamodification, hbox35, "hbox35");
   GLADE_HOOKUP_OBJECT (verifierlamodification, image35, "image35");
   GLADE_HOOKUP_OBJECT (verifierlamodification, label74, "label74");
+  GLADE_HOOKUP_OBJECT (verifierlamodification, buttonretour_cm, "buttonretour_cm");
+  GLADE_HOOKUP_OBJECT (verifierlamodification, alignment37, "alignment37");
+  GLADE_HOOKUP_OBJECT (verifierlamodification, hbox37, "hbox37");
+  GLADE_HOOKUP_OBJECT (verifierlamodification, image37, "image37");
+  GLADE_HOOKUP_OBJECT (verifierlamodification, label77, "label77");
 
   return verifierlamodification;
 }

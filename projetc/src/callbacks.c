@@ -884,3 +884,15 @@ gtk_widget_show(verifierlamodification);
 
 
 
+
+void
+on_buttonretour_cm_clicked             (GtkWidget       *objet_graphique,
+                                        gpointer         user_data)
+{
+GtkWidget *gestiondesmenusdelasemaine, *verifierlamodification;
+verifierlamodification=lookup_widget(objet_graphique,"verifierlamodification");
+gtk_widget_destroy(verifierlamodification);
+gestiondesmenusdelasemaine=create_gestiondesmenusdelasemaine();
+gtk_widget_show(gestiondesmenusdelasemaine);
+}
+

@@ -197,3 +197,7 @@ on_buttonmodifierverif_cm_clicked      (GtkWidget      *objet_graphique,
 void
 on_button244_cm_clicked                (GtkWidget       *objet_graphique,
                                         gpointer         user_data);
+
+void
+on_buttonretour_cm_clicked             (GtkWidget       *objet_graphique,
+                                        gpointer         user_data);
